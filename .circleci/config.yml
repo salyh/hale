@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     working_directory: ~/circleci-hale
-    #resource_class: large
+    resource_class: large
     docker:
       - image: circleci/openjdk:8-jdk-browsers
     steps:
