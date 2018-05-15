@@ -9,6 +9,7 @@ jobs:
       - checkout
       - run:
           name: Build
+          no_output_timeout: 7200
           command: |
             export TERM=xterm
             pwd
