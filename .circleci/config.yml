@@ -1,0 +1,22 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/circleci-hale
+    #resource_class: large
+    docker:
+      - image: circleci/openjdk:8-jdk-browsers
+    steps:
+      - run:
+          name: Build
+          command: |
+            cd build
+            ./build.sh clean
+            ./build.sh integrationStage
+            ./build.sh product --arch x86_64 --os linux HALE
+            ./build.sh product --arch x86 --os linux HALE
+            ./build.sh product --arch x86_64 --os windows HALE
+            ./build.sh product --arch x86 --os windows HALE
+            ./build.sh product --arch x86_64 --os macosx HALE
+            #./build.sh product --arch x86_64 --os linux --publish --latest Infocenter
+            #./upload-site.sh
+            #./build.sh deployArtifacts
