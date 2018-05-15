@@ -9,6 +9,11 @@ jobs:
       - run:
           name: Build
           command: |
+            pwd
+            ls -la
+            ~/circleci-hale
+            pwd
+            ls -la
             cd ~/circleci-hale/build
             ./build.sh clean
             ./build.sh integrationStage
