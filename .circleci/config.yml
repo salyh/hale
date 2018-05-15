@@ -12,10 +12,9 @@ jobs:
           command: |
             pwd
             ls -la
-            ~/circleci-hale
+            cd ~/circleci-hale/build
             pwd
             ls -la
-            cd ~/circleci-hale/build
             ./build.sh clean
             ./build.sh integrationStage
             ./build.sh product --arch x86_64 --os linux HALE
