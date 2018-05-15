@@ -10,6 +10,7 @@ jobs:
       - run:
           name: Build
           command: |
+            export TERM=xterm
             pwd
             ls -la
             cd ~/circleci-hale/build
