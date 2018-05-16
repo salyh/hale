@@ -1,3 +1,3 @@
 #!/bin/bash
 
-./gradlew --stacktrace cli -Pargs="$*"
+./gradlew -S --foreground -d cli -Pargs="$*"
